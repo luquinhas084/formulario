@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <form onsubmit="cadastrarEmprestimo()">
+
+        <div class="mainlogin">
+
+        <div class="leftlogin">
+            <h1>Preencha os dados ao lado</h1> 
+            <img src="casa.svg" class="leftimage" alt="casanaarvore">
+
+            <table id="tabelaEmprestimos" style="border: solid 1px">
+        
+                <tr class="lista">
+                
+                <th>Nome do aluno</th>
+                <th>Nome do livro</th>
+                
+                <th>Data do empréstimo</th>
+                <th>Data da devolução</th>
+                
+                </tr>
+                
+                </table>
+
+        </div>
+
+        <div class="reghtloogin">
+        <div class="cardlogin">
+                <h1>Cadastro</h1>
+            <div class="textfield">
+        <label for="nomeAluno">Nome do aluno:</label>
+        <input type="text" id="nomeAluno" required placeholder="digite seu nome"/>
+        
+        <label for="nomeLivro">Nome do livro:</label>
+        <input type="text" id="nomeLivro" required placeholder="digite o nome do livro"/>
+        
+        <label for="dataEmprestimo">Data de empréstimo:</label>
+        <input type="date" id="dataEmprestimo" required />
+        
+        <label for="dataDevolucao">Data de devolução:</label>
+        <input type="date" id="dataDevolucao" required />
+            </div>
+
+        <button onclick="abrirAlerta()" type="submit" class="btnlogin">Cadastrar Empréstimo</button>
+        <script>
+             
+        function abrirAlerta(){
+            swal({
+            title: "Óla",
+            text: "Cadastro realizado com sucesso!",
+            icon: "success",
+    });
+}
+
+        </script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+        </div>
+        </div>
+        </div>
+        </form> 
+    
+            <script src="script.js"></script>
+
+</body>
+</html>
